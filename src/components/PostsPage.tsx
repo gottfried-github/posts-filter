@@ -10,7 +10,7 @@ const PostsPage = ({ posts }: Props) => {
   return (
     <div className={styles.pageContainer}>
       {posts.map(post => (
-        <Post post={post} />
+        <Post key={post.id} post={post} />
       ))}
     </div>
   )

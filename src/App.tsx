@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { Post } from './types/posts'
 import { PostsContext } from './PostsContext'
+import Search from './components/Search'
 import Posts from './components/Posts'
 
 import styles from './App.module.css'
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className={styles.container}>
       <PostsContext.Provider value={posts}>
-        {/* <Search /> */}
+        <Search />
         <Posts />
       </PostsContext.Provider>
     </div>
