@@ -1,14 +1,16 @@
-import { Post } from '../types/posts'
+import { Post as TypePost } from '../types/posts'
+import Post from './Post'
+import styles from './PostsPage.module.css'
 
 interface Props {
-  posts: Post[]
+  posts: TypePost[]
 }
 
 const PostsPage = ({ posts }: Props) => {
   return (
-    <div>
+    <div className={styles.pageContainer}>
       {posts.map(post => (
-        <div key={post.id}>{post.body}</div>
+        <Post post={post} />
       ))}
     </div>
   )

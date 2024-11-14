@@ -4,6 +4,7 @@ import { Post } from './types/posts'
 import { PostsContext } from './PostsContext'
 import Posts from './components/Posts'
 
+import styles from './App.module.css'
 import './App.css'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className={styles.container}>
       <PostsContext.Provider value={posts}>
         {/* <Search /> */}
         <Posts />
