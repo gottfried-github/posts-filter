@@ -1,0 +1,9 @@
+.searchBoxContainer {
+  display: flex;
+
+  padding: 16px 0;
+}
+
+.searchInput {
+  flex-grow: 1;
+}

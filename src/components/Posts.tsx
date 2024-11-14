@@ -1,6 +1,7 @@
 import { useState, useMemo, useContext } from 'react'
 import { PostsContext } from '../PostsContext'
 import PostsPage from './PostsPage'
+import styles from './Posts.module.css'
 
 const Posts = () => {
   const posts = useContext(PostsContext)
@@ -38,7 +39,7 @@ const Posts = () => {
           <div>
             <PostsPage posts={pages[currentPage]} />
           </div>
-          <div>
+          <div className={styles.navContainer}>
             <button disabled={currentPage === 0} onClick={prevClickCb}>
               previous
             </button>

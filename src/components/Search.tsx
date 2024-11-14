@@ -2,6 +2,7 @@ import { useState, useContext } from 'react'
 import { Post } from '../types/posts'
 import { PostsContext } from '../PostsContext'
 import Suggestions from './Suggestions'
+import styles from './Search.module.css'
 
 const matchPosts = (v: string, posts: Post[]) => {
   const matches: Post[] = []
@@ -65,13 +66,16 @@ const Search = () => {
 
     setMatches([])
 
-    alert(match.title)
+    setTimeout(() => {
+      alert(match.title)
+    }, 0)
   }
 
   return (
     <div>
-      <div>
+      <div className={styles.searchBoxContainer}>
         <input
+          className={styles.searchInput}
           type="text"
           value={searchInputValue}
           onInput={searchInputInputEvCb}
