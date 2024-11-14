@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
+
+import { Post } from './types/posts'
 import { PostsContext } from './PostsContext'
 import Posts from './components/Posts'
 
 import './App.css'
 
 function App() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState<Post[]>([])
 
   useEffect(() => {
     const getPosts = async () => {
